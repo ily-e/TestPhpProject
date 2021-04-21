@@ -6,16 +6,16 @@ include "OraConnect.php";
 
 $conn = OraConnect::getInstance();
 
-if (!$conn) {
-    $e = oci_error();
-    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-}
+//if (!$conn) {
+//    $e = oci_error();
+//    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+//}
 
-$stid = oci_parse($conn, 'SELECT rn, acc_number FROM dicaccs');
-oci_execute($stid);
+$connect = oci_parse($conn, 'SELECT rn, acc_number FROM dicaccs');
+oci_execute($connect);
 
 echo "<table border='1'>\n";
-while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+while ($row = oci_fetch_array($connect, OCI_ASSOC+OCI_RETURN_NULLS)) {
     echo "<tr>\n";
     foreach ($row as $item) {
         echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "") . "</td>\n";
