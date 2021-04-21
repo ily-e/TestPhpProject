@@ -3,7 +3,11 @@
 
 class OraConnect
 {
-    private static $instance = null; // инстанс под синглетон
+    /**
+     * @return false|resource
+     */
+
+    private static ?OraConnect $instance = null; // инстанс под синглетон
     private $oraconnect; // переменная под коннект
 
     // конструктор
@@ -37,11 +41,18 @@ class OraConnect
     }
 
     // статическая функция возвращающая инстанс
-    public static function getInstance(){
+    public static function getInstance(): OraConnect
+    {
         if (self::$instance == null){
             self::$instance = new OraConnect();
         }
         return self::$instance;
     }
+
+    public function getOraconnect()
+    {
+        return $this->oraconnect;
+    }
+
 
 }

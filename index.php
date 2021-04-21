@@ -2,9 +2,10 @@
 
 include "OraConnect.php";
 
-//$conn = oci_connect('parus', 'parusina', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.84.33)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=YAPO1)))');
+$conn = oci_connect('parus', 'parusina', '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.84.33)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=YAPO1)))');
 
-$conn = OraConnect::getInstance();
+//$conn = OraConnect::getInstance();
+//$connect = $conn::
 
 //if (!$conn) {
 //    $e = oci_error();
