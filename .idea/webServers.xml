@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ce952774-ef9c-4386-bfaa-03dccada6f13" name="LocalServer" url="http://localhost:8084">
+      <webServer id="41eeaa8a-8a79-430f-ae2f-f2da6dfab407" name="LocalServer" url="http://localhost:8084">
         <fileTransfer mountedRoot="D:\Server\htdocs" accessType="MOUNT" port="0" />
       </webServer>
     </option>
